@@ -63,11 +63,11 @@ workflows:
           filters:
             branches:
               only:
-                - master
+                - main
       - build-image:
           filters:
             branches:
               only:
-                - master
+                - main
           requires:
             - create-version
