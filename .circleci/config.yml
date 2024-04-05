@@ -42,6 +42,7 @@ jobs:
           command: |
             sudo docker info
             source /tmp/workspace/VERSION || true
+            ls -last /var/run/docker.sock
             docker build -t ghcr.io/mosesonline/geodaten-deutschland/geodaten-deutschland:${VERSION} .
           requires:
             - checkout
