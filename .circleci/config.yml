@@ -57,7 +57,7 @@ jobs:
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
 workflows:
-  nemo-deutschlandnetz:
+  deutschland-geodaten:
     jobs:
       - create-version:
           filters:
