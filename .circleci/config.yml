@@ -25,7 +25,8 @@ jobs:
     # See: https://circleci.com/docs/configuration-reference/#executor-job
     docker:
       - image: cimg/base:current
-    resource_class: "k3s-pi/k3sbig"
+        user: root
+    resource_class: "k3s-pi/k3ssmall"
     # Add steps to the job
     # See: https://circleci.com/docs/configuration-reference/#steps
     steps:
