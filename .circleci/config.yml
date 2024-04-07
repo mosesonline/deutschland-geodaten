@@ -52,6 +52,7 @@ jobs:
       - run:
           name: "push"
           command: |
+            source /tmp/workspace/VERSION || true
             IMAGE_NAME="ghcr.io/mosesonline/geodaten-deutschland/geodaten-deutschland:${VERSION}"
             echo "pushing ${IMAGE_NAME}"
             sudo docker push ${IMAGE_NAME}
