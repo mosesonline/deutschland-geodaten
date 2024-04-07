@@ -42,11 +42,10 @@ jobs:
           name: "build"
           no_output_timeout: 1h
           command: |
-            sudo chmod u+s $(which docker)
             sudo docker info
             source /tmp/workspace/VERSION || true
             ls -last /var/run/docker.sock
-            docker build -t ghcr.io/mosesonline/geodaten-deutschland/geodaten-deutschland:${VERSION} .
+            sudo docker build -t ghcr.io/mosesonline/geodaten-deutschland/geodaten-deutschland:${VERSION} .
           requires:
             - checkout
             - "Login Docker"
