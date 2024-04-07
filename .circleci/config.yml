@@ -43,6 +43,7 @@ jobs:
           no_output_timeout: 1h
           command: |
             if [[ $CIRCLE_SHELL_ENV == *"localbuild"* ]]; then
+              echo "do something"
               sudo chmod u+s $(which docker)
             fi
             sudo docker info
